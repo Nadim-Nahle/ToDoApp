@@ -8,7 +8,7 @@
     <title>ToDoApp</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container-header">
         <h2>enter your task</h2>
         <form>
             <input type="text" name="field1" placeholder="Todo Title" />
@@ -16,6 +16,22 @@
             <textarea placeholder="Todo Description" onkeyup="adjust_textarea(this)"></textarea>
             <input type="button" value="Create Todo" />
           </form>
+    </div>
+    <div class="container-main">
+        <div class="tasklist">
+            <h2>Tasks</h2>
+            <div id="tasks">
+                <div class="task">
+                    <div class="content">
+                        <input type="text" class="text" value="my task"/>
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delte">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

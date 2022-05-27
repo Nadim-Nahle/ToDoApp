@@ -1,4 +1,4 @@
-.container{
+.container-header{
 	width: 500px;
 	padding: 30px;
 	background: #FFFFFF;
@@ -6,7 +6,7 @@
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     color:black;
 }
-.container h2{
+.container-header h2{
 	background: #03b4e0;
 	text-transform: uppercase;
 	color: white;
@@ -15,10 +15,10 @@
 	padding: 20px;
 	margin: -30px -30px 30px -30px;
 }
-.container input[type="text"],
-.container input[type="number"],
-.container input[type="time"],
-.container textarea
+.container-header input[type="text"],
+.container-header input[type="number"],
+.container-header input[type="time"],
+.container-header textarea
 {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -33,8 +33,8 @@
 	margin-bottom: 10px;
 	height: 45px;
 }
-.container input[type="button"], 
-.container input[type="submit"]{
+.container-header input[type="button"], 
+.container-header input[type="submit"]{
 	background-color: #0004ff;
 	border: 1px solid #330c8d;
 	display: inline-block;
@@ -43,6 +43,6 @@
 	font-size: 14px;
 	padding: 8px 18px;
 }
-.container input[type="button"]:hover {
+.container-header input[type="button"]:hover {
 	background-color:#ff0000;
 }
