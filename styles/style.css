@@ -36,13 +36,15 @@
 .container-header input[type="button"], 
 .container-header input[type="submit"]{
 	background-color: #0004ff;
-	border: 1px solid #330c8d;
+	border: 1px solid #4c00ff;
 	display: inline-block;
 	cursor: pointer;
 	color: #FFFFFF;
 	font-size: 14px;
 	padding: 8px 18px;
+    border-radius: 20px;
 }
 .container-header input[type="button"]:hover {
-	background-color:#ff0000;
+	background-color:#00ccff;
 }
+
