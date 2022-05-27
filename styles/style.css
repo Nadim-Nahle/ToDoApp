@@ -48,3 +48,57 @@
 	background-color:#00ccff;
 }
 
+.container-main{
+        width: 500px;
+        padding: 30px;
+        background: #FFFFFF;
+        margin: 50px auto;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+        color:black;
+    }
+.actions {
+    padding-top: 20px;
+}
+
+.edit{
+    background-color: #0004ff;
+	border: 1px solid #330c8d;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-size: 14px;
+	padding: 4px 10px;
+    border-radius: 20px;
+}
+.delete{
+        background-color: #ff0000;
+        border: 1px solid #ff0000;
+        display: inline-block;
+        cursor: pointer;
+        color: #FFFFFF;
+        font-size: 14px;
+        padding: 4px 10px;
+        border-radius: 20px;
+    
+}
+.delete:hover {
+	background-color:#000000;
+}
+.edit:hover {
+	background-color:#00d9ff;
+}
+.container-main h2{
+	background: #03b4e0;
+	text-transform: uppercase;
+	color: white;
+	font-size: 18px;
+	font-weight: 100;
+	padding: 20px;
+	margin: -30px -30px 30px -30px;
+    display: flex;
+}
+.container-main input[type="text"]{
+    width: 500px;
+    height: 40px;
+    text-align: center;
+}
