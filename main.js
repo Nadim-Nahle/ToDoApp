@@ -30,6 +30,7 @@ window.addEventListener('load', () => {
         const edit = document.querySelector(".edit");
         const inputTitle = document.querySelector(".title-text");
         const inputDescription = document.querySelector(".description");
+        const deleteTask = document.querySelector(".delete");
 
         edit.addEventListener('click', (e) => {
 			if (edit.innerText.toLowerCase() == "edit") {
@@ -40,10 +41,14 @@ window.addEventListener('load', () => {
 				inputDescription.focus();
 			} else {
 				edit.innerText = "Edit";
-				input.setAttribute("readonly", "readonly");
+				inputTitle.setAttribute("readonly", "readonly");
+				inputDescription.setAttribute("readonly", "readonly");
 			}
 		});
-        
+
+        $(".delete").on('click', function() {
+			$("#tasks").remove();
+        })
  
    
 
