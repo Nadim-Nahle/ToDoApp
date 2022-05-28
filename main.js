@@ -1,7 +1,5 @@
 window.addEventListener('load', () => {
-    $( "#form" );
-    $( "#title" );
-    $( "#tasks" );
+ 
     
    form.addEventListener('submit', (e) =>{
     e.preventDefault();
@@ -12,14 +10,27 @@ window.addEventListener('load', () => {
         alert("please fill out the title");
         return;
     }
-    const task_el = document.createElement('div');
-		task_el.classList.add('task');
+    
 
 		const task_content_el = $("#tasks").prepend('<div class="task"><div class="content"><input type="text" class="text" value="my task"/></div><div class="actions"><button class="edit">Edit</button><button class="delete">Delete</button></div></div>');
 
 
-     
-   });
+        const edit = document.querySelector(".edit");
+        const input = document.querySelector(".text");
+
+        edit.addEventListener('click', (e) => {
+			if (edit.innerText.toLowerCase() == "edit") {
+				edit.innerText = "Save";
+				input.removeAttribute("readonly");
+				input.focus();
+			} else {
+				edit.innerText = "Edit";
+				input.setAttribute("readonly", "readonly");
+			}
+		});
+        
+ 
    
 
 });
+})
