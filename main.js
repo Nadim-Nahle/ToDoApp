@@ -5,6 +5,7 @@ window.addEventListener('load', () => {
     e.preventDefault();
     
     const formTitle = title.value;
+    const formDescription = description.value;
     
     if(!formTitle){
         alert("please fill out the title");
@@ -12,17 +13,31 @@ window.addEventListener('load', () => {
     }
     
 
-		const task_content_el = $("#tasks").prepend('<div class="task"><div class="content"><input type="text" class="text" value="my task" readonly></div><div class="actions"><button class="edit">Edit</button><button class="delete">Delete</button></div></div>');
+		$("#tasks").append('<div class="task"> </div>');
+        $(".task").append('<div class="content"></div>');
+        $(".content").append('<input type="text" class="title-text" value="my task" readonly>');
+        $(".content").append('<input type="text" class="description" value="my task" readonly>');
+        $(".content").append('<div class="actions"><button class="edit">Edit</button><button class="delete">Delete</button></div>');
+        
+        
+        $('.title-text').val(formTitle);
+        $('.description').val(formDescription);
 
+        
+
+        
 
         const edit = document.querySelector(".edit");
-        const input = document.querySelector(".text");
+        const inputTitle = document.querySelector(".title-text");
+        const inputDescription = document.querySelector(".description");
 
         edit.addEventListener('click', (e) => {
 			if (edit.innerText.toLowerCase() == "edit") {
 				edit.innerText = "Save";
-				input.removeAttribute("readonly");
-				input.focus();
+				inputTitle.removeAttribute("readonly");
+				inputTitle.focus();
+                inputDescription.removeAttribute("readonly");
+				inputDescription.focus();
 			} else {
 				edit.innerText = "Edit";
 				input.setAttribute("readonly", "readonly");
