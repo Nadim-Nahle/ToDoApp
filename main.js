@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
     }
     
 
-		const task_content_el = $("#tasks").prepend('<div class="task"><div class="content"><input type="text" class="text" value="my task"/></div><div class="actions"><button class="edit">Edit</button><button class="delete">Delete</button></div></div>');
+		const task_content_el = $("#tasks").prepend('<div class="task"><div class="content"><input type="text" class="text" value="my task" readonly></div><div class="actions"><button class="edit">Edit</button><button class="delete">Delete</button></div></div>');
 
 
         const edit = document.querySelector(".edit");
