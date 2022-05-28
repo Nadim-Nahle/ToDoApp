@@ -33,7 +33,6 @@
 	margin-bottom: 10px;
 	height: 45px;
 }
-.container-header input[type="button"], 
 .container-header input[type="submit"]{
 	background-color: #0004ff;
 	border: 1px solid #4c00ff;
@@ -44,7 +43,7 @@
 	padding: 8px 18px;
     border-radius: 20px;
 }
-.container-header input[type="button"]:hover {
+.container-header input[type="submit"]:hover {
 	background-color:#00ccff;
 }
 
@@ -101,4 +100,9 @@
     width: 500px;
     height: 40px;
     text-align: center;
+    border-radius: 20px;
+    border: 1px solid #333131;
+}
+.task{
+    padding-top: 10px;
 }

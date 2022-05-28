@@ -10,18 +10,18 @@
 <body>
     <div class="container-header">
         <h2>enter your task</h2>
-        <form>
-            <input type="text" name="field1" placeholder="Todo Title" />
+        <form id="form">
+            <input type="text" id="title" name="field1" placeholder="Todo Title" />
             <input type="number" name="field1" placeholder="Point from 1 to 5" />
-            <textarea placeholder="Todo Description" onkeyup="adjust_textarea(this)"></textarea>
-            <input type="button" value="Create Todo" />
+            <textarea placeholder="Todo Description" onkeyup="adjust_textarea(this)"> </textarea>
+            <input type="submit" value="Create Todo" />
           </form>
     </div>
     <div class="container-main">
         <div class="tasklist">
             <h2>Tasks</h2>
             <div id="tasks">
-                <div class="task">
+                <!--<div class="task">
                     <div class="content">
                         <input type="text" class="text" value="my task"/>
                     </div>
@@ -29,9 +29,13 @@
                         <button class="edit">Edit</button>
                         <button class="delete">Delete</button>
                     </div>
-                </div>
+                </div>-->
             </div>
+            
         </div>
     </div>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+    </script>
 </body>
 </html>
