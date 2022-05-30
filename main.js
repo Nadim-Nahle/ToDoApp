@@ -1,32 +1,36 @@
-window.addEventListener('load', () => {
- 
+
+    $(window).on("load",function(){
+        var count =0;
+        $(".addtask").click(function() {
+            var titleList = $("#title").val();
+            var descriptionList = $('#description').val();
+            if (titleList != ''){
+                $("#tasks").append('<div class="task"> <div class="content"><input type="text" class="title-text" value='+titleList+' readonly><input type="text" class="description" value='+descriptionList+' readonly> <div class="actions"><button class="edit">Edit</button><button class="delete">Delete</button></div></div>');
+                
+            }
+            $('#title').val('');
+            $('#description').val('');
+            })
+        $(document).on('click', '.delete', function() {
+                $(".task").remove();
+        });
+    })
     
-   form.addEventListener('submit', (e) =>{
-    e.preventDefault();
-    
-    const formTitle = title.value;
+
+    /* const formTitle = title.value;
     const formDescription = description.value;
     
     if(!formTitle){
         alert("please fill out the title");
         return;
     }
-    
-
-		$("#tasks").append('<div class="task"> </div>');
-        $(".task").append('<div class="content"></div>');
-        $(".content").append('<input type="text" class="title-text" value="my task" readonly>');
-        $(".content").append('<input type="text" class="description" value="my task" readonly>');
-        $(".content").append('<div class="actions"><button class="edit">Edit</button><button class="delete">Delete</button></div>');
-        
-        
+    else{
+       
         $('.title-text').val(formTitle);
         $('.description').val(formDescription);
+    }
 
         
-
-        
-
         const edit = document.querySelector(".edit");
         const inputTitle = document.querySelector(".title-text");
         const inputDescription = document.querySelector(".description");
@@ -38,7 +42,6 @@ window.addEventListener('load', () => {
 				inputTitle.removeAttribute("readonly");
 				inputTitle.focus();
                 inputDescription.removeAttribute("readonly");
-				inputDescription.focus();
 			} else {
 				edit.innerText = "Edit";
 				inputTitle.setAttribute("readonly", "readonly");
@@ -46,11 +49,12 @@ window.addEventListener('load', () => {
 			}
 		});
 
-        $(".delete").on('click', function() {
-			$("#tasks").remove();
-        })
+        $(".task").on('click', '.delete', function() {
+			$(".task").fadeOut(200);
+        });
  
    
 
 });
 })
+*/
