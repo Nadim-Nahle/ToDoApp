@@ -21,6 +21,7 @@ $(window).on("load",function(){
    $(document).on('click', '.delete', function(){
     $(this).parent().parent().fadeOut('slow', function(){
         $(this).remove();
+        localStorage.setItem("tasks", $('#tasks').html());
     });
 });
 
