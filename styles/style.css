@@ -178,3 +178,7 @@ hr {
 	background: rgb(0, 4, 255);
 	margin-bottom: 50px;
 }
+
+.grey input[type="text"] {
+	background-color: grey;
+}
