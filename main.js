@@ -8,13 +8,16 @@ $(window).on("load",function(){
        var descriptionList = $('#description').val();
        var pointList = $('#point').val();
        var dateList = new Date($.now());
-       
-       if (titleList != ''){
-            $("#tasks").append('<div class="task"> <div class="content"><input type="text" class="title-text" value='+titleList+'  readonly><input type="text" class="description" value='+descriptionList+'  readonly> <div class="point"><input type="text" class="point-text" value="point ='+pointList+'"  readonly><div>'+dateList+'</div><div class="actions"><button class="edit" value="0">Edit</button><button class="delete">Delete</button><button class="finish">Finish</button></div></div>');
+
+       if (titleList != '' && descriptionList !='' && pointList != ''){
+            $("#tasks").append('<div class="task"> <div class="content"><input type="text" class="title-text" value='+titleList+'  readonly><input type="text" class="description" value='+descriptionList+'  readonly> <div class="point"><div class="points"><input type="text" class="point-text" value="point ='+pointList+'"  readonly></div><div class="dates">'+dateList+'</div><div class="actions"><button class="edit" value="0">Edit</button><button class="delete">Delete</button><button class="finish">Finish</button></div></div><hr>');
            localStorage.setItem("tasks", $('#tasks').html());
 
            $('#title').val("");
            $('#description').val('');
+       }
+       else{
+           alert('please fill all the fields');
        }
    }); 
     

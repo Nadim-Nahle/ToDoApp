@@ -119,3 +119,62 @@
     border: 1px solid #333131;
     margin-top: 20px;
 }
+
+
+.container-main input[type="text"].point-text{
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #333131;
+	align-items:center ;
+	align-content: center;
+	justify-content: center;
+}
+.points{
+	align-items: center;
+	text-align: center;
+	padding-top: 10px;
+}
+.dates{
+	padding-top: 10px;
+}
+.finish{
+    background-color: #00c3ff;
+	border: 1px solid #330c8d;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-size: 14px;
+	padding: 4px 10px;
+    border-radius: 20px;
+	margin-left: 10px;
+	
+}
+.finish:hover {
+	background-color:#2f00ff;
+}
+
+.addtask{
+    background-color: #2f00ff;
+	border: 1px solid #330c8d;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-size: 14px;
+	padding: 4px 10px;
+    border-radius: 20px;
+	
+}
+.addtask:hover {
+	background-color:#00aeff;
+}
+
+hr {
+	position: relative;
+	top: 20px;
+	border: none;
+	height: 3px;
+	background: rgb(0, 4, 255);
+	margin-bottom: 50px;
+}
