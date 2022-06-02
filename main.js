@@ -9,7 +9,7 @@ $(window).on("load",function(){
        var descriptionList = $('#description').val();
        
        if (titleList != ''){
-            $("#tasks").append('<div class="task"> <div class="content"><input type="text" class="title-text" value='+titleList+'  readonly><input type="text" class="description" value='+descriptionList+'  readonly> <div class="actions"><button class="edit" value="0">Edit</button><button class="delete">Delete</button></div></div>');
+            $("#tasks").append('<div class="task"> <div class="content"><input type="text" class="title-text" value='+titleList+'  readonly><input type="text" class="description" value='+descriptionList+'  readonly> <div class="actions"><button class="edit" value="0">Edit</button><button class="delete">Delete</button><button class="finish">Finish</button></div></div>');
 
            localStorage.setItem("tasks", $('#tasks').html());
 
@@ -20,11 +20,13 @@ $(window).on("load",function(){
     
    //the delete action
     $(document).on('click', '.delete', function(){
-        $(this).parent().parent().fadeOut('slow', function(){
+        $(this).parent().parent().parent().fadeOut('slow', function(){
             $(this).remove();
             localStorage.setItem("tasks", $('#tasks').html());
         });
     });
+
+    //the edit action
     const edit = document.querySelector(".edit");
     $('.edit').click(function(event){
         if( edit.innerText == "Edit" ){
@@ -44,6 +46,14 @@ $(window).on("load",function(){
         
         localStorage.setItem("tasks", $('#tasks').html());
     })
+
+
+    $(document).on('click', '.finish', function(){
+        $(this).parent().parent().parent().css("background-color","grey");
+            
+        
+        
+    });
 
 })   
     
