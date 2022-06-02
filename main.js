@@ -3,14 +3,14 @@ $(window).on("load",function(){
     $('#tasks').html(localStorage.getItem("tasks"));
     
     $('#form').submit(function(event){
-       event.preventDefault();
-       
+       event.preventDefault();  
        var titleList = $('#title').val();
        var descriptionList = $('#description').val();
+       var pointList = $('#point').val();
+       var dateList = new Date($.now());
        
        if (titleList != ''){
-            $("#tasks").append('<div class="task"> <div class="content"><input type="text" class="title-text" value='+titleList+'  readonly><input type="text" class="description" value='+descriptionList+'  readonly> <div class="actions"><button class="edit" value="0">Edit</button><button class="delete">Delete</button><button class="finish">Finish</button></div></div>');
-
+            $("#tasks").append('<div class="task"> <div class="content"><input type="text" class="title-text" value='+titleList+'  readonly><input type="text" class="description" value='+descriptionList+'  readonly> <div class="point"><input type="text" class="point-text" value="point ='+pointList+'"  readonly><div>'+dateList+'</div><div class="actions"><button class="edit" value="0">Edit</button><button class="delete">Delete</button><button class="finish">Finish</button></div></div>');
            localStorage.setItem("tasks", $('#tasks').html());
 
            $('#title').val("");
@@ -20,7 +20,8 @@ $(window).on("load",function(){
     
    //the delete action
     $(document).on('click', '.delete', function(){
-        $(this).parent().parent().parent().fadeOut('slow', function(){
+      //  $(this).parent().parent().parent().fadeOut('slow', function(){
+          $(this).closest('.task').fadeOut('slow', function(){
             $(this).remove();
             localStorage.setItem("tasks", $('#tasks').html());
         });
@@ -49,10 +50,8 @@ $(window).on("load",function(){
 
 
     $(document).on('click', '.finish', function(){
-        $(this).parent().parent().parent().css("background-color","grey");
-            
-        
-        
+        $(this).closest('.task').css("background-color", 'grey');
+                  
     });
 
 })   
